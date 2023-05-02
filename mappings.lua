@@ -14,9 +14,10 @@ return {
     ["<leader>gs"] = { "<cmd>Git<cr>", desc = "Git" },
     ["<leader>s"] = { "<cmd>TestNearest<cr>", desc = "Test nearest" },
     ["<leader>t"] = { "<cmd>TestFile<cr>", desc = "Test file" },
-    ["<F9>"] = { "<cmd>Neotree toggle<cr>", desc = "Open file tree" },
+    ["<F9>"] = { "<cmd>Neotree toggle source=filesystem<cr>", desc = "Open file tree" },
     ["<C-s>"] = { function() require("telescope.builtin").live_grep() end, desc = "Find files" },
     ["<C-p>"] = { function() require("telescope.builtin").find_files() end, desc = "Find files" },
+    ["<s-k>"] = { function() require("telescope.builtin").grep_string() end, desc = "Find word" },
     ["<leader>bD"] = {
       function()
         require("astronvim.utils.status").heirline.buffer_picker(function(bufnr) require("astronvim.utils.buffer").close(bufnr) end)
