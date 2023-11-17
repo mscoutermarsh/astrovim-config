@@ -7,7 +7,7 @@ return {
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
     relativenumber = false,
-    undodir = "~/.vim/undo/",
+    undodir = os.getenv("HOME") .. "/.vim/undo",
     undofile = true,
     undolevels = 1000,
     undoreload = 10000,
