@@ -33,7 +33,7 @@ return {
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
-          -- "go",
+          "go",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
@@ -82,4 +82,18 @@ return {
     --   },
     -- }
   end,
+
+  plugins = {
+    { -- override nvim-autopairs plugin
+      "windwp/nvim-autopairs",
+      config = function(plugin, opts)
+        -- run default AstroNvim config
+        require "plugins.configs.nvim-autopairs"(plugin, opts)
+        -- require Rule function
+        local Rule = require "nvim-autopairs.rule"
+        local npairs = require "nvim-autopairs"
+        npairs.remove_rule("`")
+      end,
+    },
+  },
 }

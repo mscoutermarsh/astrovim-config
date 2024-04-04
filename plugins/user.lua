@@ -11,6 +11,17 @@ return {
   { "benmills/vimux", lazy = false },
   { "RRethy/nvim-treesitter-endwise", lazy = false },
   { "roman/golden-ratio", lazy = false },
+  { "tmhedberg/matchit" },
+  { "fatih/vim-go" },
+  { "nvim-treesitter/nvim-treesitter-textobjects" },
+  { "vim-ruby/vim-ruby" },
+  { "tpope/vim-rhubarb", lazy = false },
+  -- { "windwp/nvim-autopairs",
+  --   config = function(plugin, opts)
+  --     local npairs = require "nvim-autopairs"
+  --     npairs.remove_rule('`')
+  --   end,
+  --   }
   -- You can also add new plugins here as well:
   -- Add plugins, the lazy syntax
   -- "andweeb/presence.nvim",
